@@ -1,0 +1,15 @@
+table{
+    width:100%
+}
+
+table,th,td{
+    border: 2px solid green;  
+    background-color: aquamarine;
+    font-size:20px;
+}
+th,td {
+    text-align:center;
+  }
+  
+  
+    

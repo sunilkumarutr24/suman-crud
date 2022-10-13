@@ -1,0 +1,26 @@
+
+<hr/>
+<H2>observable1 Component works! </H2>
+<button (click)="btnclick()"> click Here Observable</button>
+<br/>
+<br/>
+
+<button (click)="getApiData()"> Get fake API Data</button>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>   
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let UsesDetails of  UserDetails">
+        <td>{{UsesDetails.id}}</td>
+        <td>{{UsesDetails.name}}</td>
+        <td>{{UsesDetails.username}}</td>        
+        <td>{{UsesDetails.email}}</td>
+        
+    </tr>
+</table>
+<hr/>
+
+<!-- <app-crud></app-crud> -->

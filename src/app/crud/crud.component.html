@@ -1,0 +1,88 @@
+<div class="container ">
+    <form   [formGroup]="myform" >
+
+      <mat-form-field appearance="outline" >
+        <mat-label>Name</mat-label>
+        <input type="rext" name="Emp_Name" matInput formControlNamr="Emp_Name" >
+      </mat-form-field><br/>
+        
+      <mat-form-field appearance="outline" >
+        <mat-label>Phone</mat-label>
+        <input type="number" name="Emp_Mobileno" matInput formControlNamr="Emp_Mobileno" >
+      </mat-form-field><br/>
+
+      <mat-form-field appearance="outline" >
+        <mat-label>Email</mat-label>
+        <input type="email" name="Emp_Email" matInput formControlNamr="Emp_Email" >
+      </mat-form-field><br/>
+      
+        
+      <mat-radio-group aria-label="Select an option">
+        <mat-label>Gender</mat-label>
+        <mat-radio-button value="Male"  name="Emp_Gender" formControlName="Emp_Gender">Male</mat-radio-button>
+        <mat-radio-button value="Female"name="Emp_Gender" formControlName="Emp_Gender">Female</mat-radio-button>
+      </mat-radio-group><br/><br/>
+
+
+      <mat-form-field appearance="outline">
+        <mat-label>Salary</mat-label>
+        <input type="number" matInput name="Emp_Salary" formControlNamr="Emp_Salary" >
+      </mat-form-field><br/>
+       
+        <mat-form-field appearance="outline">
+          <mat-label>Department</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let dept of emplist" [value]="dept.value">
+              {{dept.Emp_Deptname}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field><br/>
+        
+        <button type="submit"  mat-raised-button color="primary" (click)="CreateEmp()" >Create</button>
+      </form>
+</div>
+
+
+<H2>CRUD Component works!</H2>
+<button (click)="getApidata()"> Get API Data</button>
+
+<table >
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>Deptname</th>
+        <th>Detatails</th>
+    </tr>
+    <tr *ngFor="let users of emplist">
+        <td>{{users.id}}</td>
+        <td>{{users.Emp_Name}}</td>
+        <td>{{users.Emp_Mobileno}}</td>    
+        <td>{{users.EmpEemail}}</td>
+        <!-- <td>{{users.Emp_Gender == false?"Male":"Female"}}</td>     -->
+        <td>{{users.Emp_Gender |settingGender}}</td>
+        <td>{{users.Emp_Salary}}</td>
+        <td>{{users.Emp_Deptname}}</td>
+        <td>
+            
+            <!-- <tr>
+                <th>detatails</th>
+                <th>details</th>
+            </tr> -->
+            <tr style="height:40px; width:100%;">
+                <td class="edit"><button type="button" style="width:100%; ">Edit</button></td>
+                <td class="update"><button type="button" style="width:100%; ">Update</button></td>
+                <td class="delete"><button type="button" style=" width:100%; ">Delete</button></td>
+            </tr>
+        </td>
+    </tr>
+
+</table>
+
+<hr/>
+<!-- <app-view-child1></app-view-child1> -->
+
+

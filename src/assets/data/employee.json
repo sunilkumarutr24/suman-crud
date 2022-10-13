@@ -1,0 +1,44 @@
+{
+    "posts":[
+        {"id":1,
+        "Emp_Name":"Sunil",
+        "EmpEemail":"sunil@gmail.com",
+        "Emp_Gender":false,
+        "Emp_Mobileno":7799112090,
+        "Emp_Salary":20000,
+        "Emp_Deptname":"Accounting"
+       } ,
+       {"id":2,
+        "Emp_Name":"Beejesh",
+        "EmpEemail":"beejesh@gmail.com",
+        "Emp_Gender":false,
+        "Emp_Mobileno":7799112091,
+        "Emp_Salary":20000,
+        "Emp_Deptname":"Reasearch"
+       } ,
+       {"id":3,
+        "Emp_Name":"Kumar",
+        "EmpEemail":"kumar@gmail.com",
+        "Emp_Gender":false,
+        "Emp_Mobileno":7799112092,
+        "Emp_Salary":20000,
+        "Emp_Deptname":"Sales"
+       } ,
+       {"id":3,
+        "Emp_Name":"Kumar",
+        "EmpEemail":"kumar@gmail.com",
+        "Emp_Gender":false,
+        "Emp_Mobileno":7799112092,
+        "Emp_Salary":20000,
+        "Emp_Deptname":"Sales"
+       } 
+
+    ],
+    "comments": [
+        { "id": 1, "body": "some comment", "postId": 1 }
+      ],
+      "profile": { "name": "typicode" }
+} 
+   
+      
+    

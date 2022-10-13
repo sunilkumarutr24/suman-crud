@@ -1,0 +1,100 @@
+<p>raju works!</p>
+<div class="container"></div>
+<div class="row">
+    <div class="col-5">
+      <div [formGroup]="userFormGroup">
+        <label>Name</label><br />
+        <input formControlName="name" /><br /><br />
+        <label>Age</label><br />
+        <select formControlName="age">
+          <option *ngFor="let age of ages" [value]="age">
+            {{age}}
+          </option> </select
+        ><br /><br />
+        <label>Gender</label><br />
+        <div class="" *ngFor="let data of genderData">
+          <input
+            formControlName="gender"
+            [value]="data.value"
+            type="radio"
+            name="gender"
+          />{{data.name}}
+        </div>
+        <!-- <input
+          type="radio"
+          (click)="onClickGender('Male')"
+          name="gender"
+        />Male
+        <input
+          type="radio"
+          (click)="onClickGender('Female')"
+          name="gender"
+        />
+        Female -->
+        <br /><br />
+        <label>Hobbies</label><br />
+        <div
+          class=""
+          [formArrayName]="'hobbies'"
+          *ngFor="let rowGroup of GenerateHobbies();let i= index;"
+        >
+          <div class="" [formGroupName]="i">
+            <input formControlName="hobbie" /> &nbsp;
+            <button *ngIf="i===0" (click)="addFormItem(rowGroup.value.hobbie)">
+              +
+            </button>
+            &nbsp;
+            <ng-container *ngIf="i!==0">
+              <button (click)="removeItem(i)">-</button>
+            </ng-container>
+          </div>
+        </div>
+        <input formControlName="isChecked" [value]="" type="checkbox" /> All the
+        information are verified <br /><br />
+        <ng-container *ngIf="!this.userID">
+          <button (click)="onclcikSave()">submit</button>
+        </ng-container>
+        <ng-container *ngIf="this.userID">
+          <button (click)="onClickUpdate()">Updated</button>
+        </ng-container>
+        <button (click)="OnclickReset()">Reset</button>
+      </div>
+    </div>
+    <div class="col-7">
+      <div class="row">
+        <input
+          type="text"
+          [formControl]="formtextsearch"
+          (keyup)="onkeyUpSearch()"
+        />
+      </div>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Hobbies</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userDetails">
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.hobbies}}</td>
+            <td>
+              <a (click)="onclilckDelete(user)" class="text-danger"
+                >{{'Delete'}}</a
+              >
+            </td>
+            <td>
+              <a (click)="onClickGetDataforEdit(user)" class="text-info"
+                >{{'Edit'}}</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

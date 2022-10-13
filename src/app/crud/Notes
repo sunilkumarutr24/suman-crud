@@ -1,0 +1,34 @@
+HttpClient:
+==========
+
+We can communicat with data which is present in sercer over Http protocal.
+
+CRUD
+-----
+
+1) Registration /improting the httpClientModule in Module.ts file
+       @anguler/commn/http
+
+       import { HttpClientModule } from '@angular/common/http';
+ 
+ 2)  Creation of model based on our response. class  
+
+ 3)  Creation of service file .
+        -->importing the HttpClinent
+        -->creation of dependency injection for HttpClient class
+
+  HtttpClient obj = new Httpclient();
+  obj.get("url")     
+
+  ===>get method  returns observable type info from streamed data 
+
+4) Service consumption from component by using .subscriobe() --> (method)Observable<object>.subscribe(observer) 
+
+  ===> calling the service
+----------------------------------------------------------------------------------------------------------------
+
+class - 2.
+1) Gender setup by ternary operator
+2) Gender setup by using custum pipes
+3) Form Creation for insertion (Reactive Forms)
+4) Filling dropdownlist by depaatments 

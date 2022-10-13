@@ -1,0 +1,21 @@
+
+table, th, td {
+  border: 2px solid green;
+  
+}
+table {
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  th,td {
+    text-align:center;
+  }
+
+  .edit,.update,.delete{
+    padding:5px;
+  width:50%;
+  border:0px solid ;
+  margin:10px;
+  }
+  
